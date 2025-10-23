@@ -1,4 +1,30 @@
-Upload Stock Market Result PDF
-Upload
-Feedback
-Submit Feedback
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <title>Stock Market Results Summarizer</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Upload Stock Market Result PDF</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" id="file" accept=".pdf" required>
+            <button type="submit">Upload</button>
+        </form>
+
+        <h2>Feedback</h2>
+        <form action="/feedback" method="post">
+            <textarea name="feedback" id="feedback" rows="4" placeholder="Provide your feedback here..."
+                required></textarea>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
